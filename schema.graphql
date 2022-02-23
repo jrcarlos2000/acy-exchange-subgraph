@@ -1,0 +1,6 @@
+type ExampleEntity @entity {
+  id: ID!
+  count: BigInt!
+  allPath: [Bytes]! # address[]
+  XiYiArr: [BigInt]! # uint256[]
+}
