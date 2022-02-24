@@ -1,19 +1,22 @@
-specVersion: 0.0.1
+specVersion: 0.0.2
+description: ACY
+repository: https://github.com/jrcarlos2000/acy-exchange-polygon
 schema:
   file: ./schema.graphql
 dataSources:
-  - kind: ethereum
+  - kind: ethereum/contract
     name: Contract
-    network: bsc
+    network: matic
     source:
       address: "0x4DCa8E42634abdE1925ebB7f82AC29Ea00d34bA2"
       abi: Contract
+      startBlock: 23486183
     mapping:
       kind: ethereum/events
       apiVersion: 0.0.5
       language: wasm/assemblyscript
       entities:
-        - FlashArbitrageResultLogs
+        - FlashArbitrageStat
       abis:
         - name: Contract
           file: ./abis/Contract.json
